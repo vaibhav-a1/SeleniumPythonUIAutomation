@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-23T16:19:49.711895" rpa="false" schemaversion="5">
+<suite id="s1" name="EC1" source="D:\GIT\17January2024\SeleniumPythonUIAutomation\testsuites\executioncalender\EC1.robot">
+<kw name="Open Browser and Login to the ACQUIA" owner="common_keywords" type="SETUP">
+<kw name="Launch Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:19:50.037095" level="INFO">Opening browser 'Chrome' to base url 'https://qa-vega.agilone.com/login'.</msg>
+<arg>${${env}_url}</arg>
+<arg>${browsername}</arg>
+<arg>auto-close=False</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-23T16:19:50.036079" elapsed="18.502919"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-02-23T16:20:08.540000" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${MAX_WAIT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-02-23T16:20:08.540000" elapsed="1.002642"/>
+</kw>
+<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary">
+<arg>${MAX_WAIT}</arg>
+<doc>Sets the page load timeout value used by Selenium.</doc>
+<status status="PASS" start="2024-02-23T16:20:09.542642" elapsed="1.002210"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-23T16:20:10.545615" elapsed="1.125707"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Email address</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:20:11.671322" elapsed="1.018689"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:13.700273" level="INFO">${window_title} = Login</msg>
+<var>${window_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-02-23T16:20:12.690011" elapsed="1.010624"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:14.709025" level="INFO">Page title is 'Login'.</msg>
+<arg>${${env}_loginpage_name}</arg>
+<arg>window title is not match.</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-23T16:20:13.700635" elapsed="1.008739"/>
+</kw>
+<arg>${env}</arg>
+<arg>${browsername}</arg>
+<doc>Based User input it will launches the apllication if you are not provided default env is QA</doc>
+<status status="PASS" start="2024-02-23T16:19:50.029583" elapsed="24.680135"/>
+</kw>
+<kw name="Login To The Application" owner="common_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${username_input_field_xpath}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:20:14.711185" elapsed="3.090819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:17.804790" level="INFO">Typing text 'aruna.boddu@acquia.com' into text field '//input[@placeholder='Username']'.</msg>
+<arg>${username_input_field_xpath}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:20:17.802809" elapsed="3.185346"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button_xpath}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:20:20.989221" elapsed="3.063741"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:24.053735" level="INFO">Clicking element '//*[text()='Next']'.</msg>
+<arg>${next_button_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:20:24.053280" elapsed="2.049572"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${password_input_field_xpath}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:20:26.103405" elapsed="4.270147"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:30.374553" level="INFO">Typing text 'ArunaAgilOne@1' into text field '//*[@id='input_2']'.</msg>
+<arg>${password_input_field_xpath}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:20:30.374553" elapsed="3.091454"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${signIn_button_xpath}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:20:33.466520" elapsed="3.054045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:36.520565" level="INFO">Clicking element '//*[@id='login-form']/div[1]/form/div[2]/button'.</msg>
+<arg>${signIn_button_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:20:36.520565" elapsed="2.059552"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Campaigns_list}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:20:38.580117" elapsed="9.538593"/>
+</kw>
+<arg>${${env}_username}</arg>
+<arg>${${env}_password}</arg>
+<doc>Based User input it will login to the apllication if you are not provided default login to to QA</doc>
+<status status="PASS" start="2024-02-23T16:20:14.709718" elapsed="33.408992"/>
+</kw>
+<doc>This Task open browser and login to the application based on User Inputs by default set to QA</doc>
+<status status="PASS" start="2024-02-23T16:19:50.028496" elapsed="58.090214"/>
+</kw>
+<test id="s1-t1" name="TC001_Verify Execution calender for Minutes:" line="8">
+<kw name="Select Tenant From User Profile" owner="common_keywords" type="SETUP">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${profile_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:20:48.120707" elapsed="2.470895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:50.591602" level="INFO">Clicking element '//*[@id='right-nav-toggle']'.</msg>
+<arg>${profile_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:20:50.591602" elapsed="2.098913"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:20:55.691028" level="INFO">Slept 3 seconds.</msg>
+<arg>${MIN_WAIT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:20:52.690515" elapsed="3.000513"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:55.692082" level="INFO">Executing JavaScript:
+window.scrollBy(0,100);
+Without any arguments.</msg>
+<arg>window.scrollBy(0,100);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-23T16:20:55.691028" elapsed="1.009802"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:20:59.702022" level="INFO">Slept 3 seconds.</msg>
+<arg>${MIN_WAIT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:20:56.700830" elapsed="3.001192"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:20:59.703048" level="INFO">Executing JavaScript:
+var element = document.evaluate("//p[text()='QARegression']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView();
+Without any arguments.</msg>
+<arg>var element = document.evaluate("//p[text()='${tenant_name}']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-23T16:20:59.702022" elapsed="1.017909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://p[text()='${tenant_name}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:21:00.720726" elapsed="2.044367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:02.767094" level="INFO">Clicking element 'xpath://button[@aria-label="QARegression"]'.</msg>
+<arg>xpath://button[@aria-label="${tenant_name}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:02.766101" elapsed="2.096472"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:21:09.863891" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:21:04.862573" elapsed="5.001318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Campaigns_list}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:21:09.865265" elapsed="4.472539"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Campaigns_list}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:14.338766" elapsed="1.011431"/>
+</kw>
+<arg>${QA_Regression_tenant_name}</arg>
+<doc>This keyword is used to select tenant from user profile menu
+1.Click on the Userprofile
+2.Go to Spefic Tenant
+3.Select Tenant</doc>
+<status status="PASS" start="2024-02-23T16:20:48.119736" elapsed="27.230461"/>
+</kw>
+<kw name="Go to New Campaign" owner="01_Actions_Page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Campaigns_list}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:21:15.353167" elapsed="2.042837"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Campaigns_list}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:17.396004" elapsed="1.011201"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${new_campaign_button}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:18.407205" elapsed="3.040960"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:22.467208" level="INFO">Current page contains element '//*[@id='vegaFiles']/div[2]/div[6]/button/span'.</msg>
+<arg>${new_campaign_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:21.448165" elapsed="1.019043"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:22.469204" level="INFO">Clicking element '//*[@id='vegaFiles']/div[2]/div[6]/button/span'.</msg>
+<arg>${new_campaign_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:22.468234" elapsed="2.114427"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Playbook Campaigns</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:24.582661" elapsed="1.022343"/>
+</kw>
+<doc>this is so and so...
+Step1
+Step2
+Step3</doc>
+<status status="PASS" start="2024-02-23T16:21:15.351171" elapsed="10.253833"/>
+</kw>
+<kw name="Select Go Wild" owner="01_Actions_Page">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${go_wild}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:25.605900" elapsed="3.035834"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:28.641734" level="INFO">Clicking element '//img[@ng-src='https://images.agilone.com/aif/playbooks/GoWild.png']'.</msg>
+<arg>${go_wild}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:28.641734" elapsed="2.149747"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:31.807782" level="INFO">Current page contains element '//*[@id='campaignChannel']/div[1]/div[1]/div/input'.</msg>
+<arg>${actions_channel_search_box}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:30.791481" elapsed="1.016419"/>
+</kw>
+<doc>this is Selecting Go wild option</doc>
+<status status="PASS" start="2024-02-23T16:21:25.605742" elapsed="6.202158"/>
+</kw>
+<kw name="Search And Select Reuired Channel" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${actions_channel_search_box}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:31.808861" elapsed="3.030949"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:34.840549" level="INFO">Typing text 'SFTP output connector for automation' into text field '//*[@id='campaignChannel']/div[1]/div[1]/div/input'.</msg>
+<arg>${actions_channel_search_box}</arg>
+<arg>${required_channel_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:34.839810" elapsed="3.120179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:21:40.963754" level="INFO">Slept 3 seconds.</msg>
+<arg>${MIN_WAIT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:21:37.960987" elapsed="3.002767"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:40.964750" level="INFO">Clicking element '//*[@id='campaignChannel']/div[1]/div[2]/md-whiteframe/md-card/div/div[1]/img'.</msg>
+<arg>${SFTP_output_search_result}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:40.963754" elapsed="2.085219"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Name_your_campaign_label}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:21:43.048973" elapsed="1.016404"/>
+</kw>
+<arg>${SFTP_automation_channel_name}</arg>
+<doc>this is seaching channel in Actions Page</doc>
+<status status="PASS" start="2024-02-23T16:21:31.808861" elapsed="12.256516"/>
+</kw>
+<kw name="Fill Data in Setup Page" owner="01_Actions_Page">
+<kw name="Get Randome Name" owner="userlib">
+<msg time="2024-02-23T16:21:44.066831" level="INFO">${random_name} = 0a8arluyQf</msg>
+<var>${random_name}</var>
+<status status="PASS" start="2024-02-23T16:21:44.065831" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-02-23T16:21:44.067963" level="INFO">${name} = 0a8arluyQf</msg>
+<var>${name}</var>
+<arg>'${campaign_name}' == 'None'</arg>
+<arg>${random_name}</arg>
+<arg>${campaign_name}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-02-23T16:21:44.066831" elapsed="0.001132"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-23T16:21:44.068825" level="INFO">0a8arluyQf</msg>
+<arg>${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-23T16:21:44.067963" elapsed="0.000862"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-02-23T16:21:44.069822" level="INFO">${name} = 0a8arluyQf</msg>
+<arg>${name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-02-23T16:21:44.069822" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${name_input_xpath}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:44.069822" elapsed="3.033874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:47.104442" level="INFO">Typing text '0a8arluyQf' into text field '//*[@id='campNewName']'.</msg>
+<arg>${name_input_xpath}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:47.103696" elapsed="3.197121"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${next_button_xpath}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:50.300817" elapsed="3.031710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:21:53.333290" level="INFO">Clicking element '//*[text()='Next']'.</msg>
+<arg>${next_button_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:21:53.332527" elapsed="2.146130"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${audience_page_label}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:55.478657" elapsed="3.036753"/>
+</kw>
+<doc>By default it will Input with random value if you want your own name you can pass</doc>
+<status status="PASS" start="2024-02-23T16:21:44.065831" elapsed="14.449579"/>
+</kw>
+<kw name="Add Group" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${add_group_xpath}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:21:58.516409" elapsed="3.032030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:01.548727" level="INFO">Clicking element '//*[@id='campaignAudience']/div[2]/div/div[1]/div[2]/div/button/span'.</msg>
+<arg>${add_group_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:01.548727" elapsed="2.347787"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${search_rule}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:03.896514" elapsed="3.041915"/>
+</kw>
+<doc>this is Adding Group in Audience page ...</doc>
+<status status="PASS" start="2024-02-23T16:21:58.515410" elapsed="8.423019"/>
+</kw>
+<kw name="Search Rule And Select" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${search_rule}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:06.939455" elapsed="3.039410"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:09.980022" level="INFO">Typing text 'First Transaction Date' into text field '//*[@name='dataset-selection-search-text']'.</msg>
+<arg>${search_rule}</arg>
+<arg>${required_rule_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:09.978865" elapsed="3.203528"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:22:16.183341" level="INFO">Slept 3 seconds.</msg>
+<arg>${MIN_WAIT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:22:13.182393" elapsed="3.001376"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:16.184351" level="INFO">Clicking element '//div[text()='First Transaction Date']'.</msg>
+<arg>${search_rule_target_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:16.183769" elapsed="2.084467"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${date_input_field}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-23T16:22:18.269227" elapsed="1.028505"/>
+</kw>
+<arg>${search_rule_input_data}</arg>
+<doc>this is Search Rule And Select add rule page</doc>
+<status status="PASS" start="2024-02-23T16:22:06.938429" elapsed="12.359303"/>
+</kw>
+<kw name="Enter Date In Audience Page" owner="01_Actions_Page">
+<kw name="Get Current Date" owner="userlib">
+<msg time="2024-02-23T16:22:19.298760" level="INFO">${sys_date} = 02/23/2024</msg>
+<var>${sys_date}</var>
+<status status="PASS" start="2024-02-23T16:22:19.297732" elapsed="0.001028"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-02-23T16:22:19.298760" level="INFO">${date} = 02/23/2024</msg>
+<var>${date}</var>
+<arg>'${date_input}' == 'None'</arg>
+<arg>${sys_date}</arg>
+<arg>${date_input}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-02-23T16:22:19.298760" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-23T16:22:19.299846" level="INFO">02/23/2024</msg>
+<arg>${date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-23T16:22:19.298760" elapsed="0.001086"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${date_input_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:19.299995" elapsed="3.026931"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:22.327847" level="INFO">Typing text '02/23/2024' into text field '//input[@aria-label='Enter date']'.</msg>
+<arg>${date_input_field}</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:22.326926" elapsed="3.121331"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignAudienceNext}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:25.448257" elapsed="3.059629"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campaignAudienceNext}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:22:28.507886" elapsed="2.047638"/>
+</kw>
+<doc>this is enter date</doc>
+<status status="PASS" start="2024-02-23T16:22:19.297732" elapsed="11.258787"/>
+</kw>
+<kw name="Click Audience Page Next Button" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignAudienceNext}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:30.559561" elapsed="3.073587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:33.635142" level="INFO">Clicking element '//*[@id='campaignAudienceNext']/span'.</msg>
+<arg>${campaignAudienceNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:33.634143" elapsed="2.155228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campaignABNext}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:22:35.789371" elapsed="2.040122"/>
+</kw>
+<status status="PASS" start="2024-02-23T16:22:30.557837" elapsed="7.272655"/>
+</kw>
+<kw name="Click AB Page Next Button" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignABNext}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:37.832483" elapsed="3.066218"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:40.898701" level="INFO">Clicking element '//*[@id='campaignABNext']'.</msg>
+<arg>${campaignABNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:40.898701" elapsed="2.143311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campaignContentNext}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:22:43.042012" elapsed="2.063461"/>
+</kw>
+<status status="PASS" start="2024-02-23T16:22:37.831487" elapsed="7.273986"/>
+</kw>
+<kw name="Click Campaign Content Next Button" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignContentNext}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:45.106829" elapsed="3.057202"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:48.166794" level="INFO">Clicking element '//button[@id='campaignContentNext']'.</msg>
+<arg>${campaignContentNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:48.165678" elapsed="2.127646"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campaignDestinationFtpNext}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:22:50.293324" elapsed="2.032442"/>
+</kw>
+<status status="PASS" start="2024-02-23T16:22:45.106829" elapsed="7.218937"/>
+</kw>
+<kw name="Click Campaign Destination Ftp Next Button" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignDestinationFtpNext}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:52.326765" elapsed="3.028882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:22:55.356504" level="INFO">Clicking element '//button[@id='campaignDestinationFtpNext']'.</msg>
+<arg>${campaignDestinationFtpNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:22:55.355647" elapsed="2.135929"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${schedule_button}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:22:57.491576" elapsed="2.032946"/>
+</kw>
+<status status="PASS" start="2024-02-23T16:22:52.325766" elapsed="7.199706"/>
+</kw>
+<kw name="Fill All The Required Fields in Summary Page" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${schedule_button}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:22:59.528495" elapsed="3.069868"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:02.600359" level="INFO">Clicking element '//*[@id='scheduleFrame']//div[@class='md-container']'.</msg>
+<arg>${schedule_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:02.599362" elapsed="2.108032"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${schedule_send_dropdown}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:23:04.708402" elapsed="3.074409"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:07.785754" level="INFO">Clicking element '(//md-select)[4]'.</msg>
+<arg>${schedule_send_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:07.783815" elapsed="2.098813"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:11.913519" level="INFO">Element '//div[text()='MINUTES']' is displayed.</msg>
+<arg>${schedule_MINUTES}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:23:09.882985" elapsed="2.030534"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:11.914539" level="INFO">Clicking element '//div[text()='MINUTES']'.</msg>
+<arg>${schedule_MINUTES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:11.914539" elapsed="2.110900"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-23T16:23:16.027154" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-23T16:23:14.026054" elapsed="2.001100"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:16.028154" level="INFO">Executing JavaScript:
+document.evaluate("(//md-select-value)[4]/span[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>document.evaluate("(//md-select-value)[4]/span[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-23T16:23:16.027154" elapsed="1.015643"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:19.112840" level="INFO">Element '//div[@class='md-text ng-binding' and text()='15']' is displayed.</msg>
+<arg>${schedule_send_every_15min}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:23:17.043810" elapsed="2.069800"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:19.115583" level="INFO">Clicking element '//div[@class='md-text ng-binding' and text()='15']'.</msg>
+<arg>${schedule_send_every_15min}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:19.114601" elapsed="2.079341"/>
+</kw>
+<kw name="Enter Date In Summary Page" owner="01_Actions_Page">
+<kw name="Get Current Date" owner="userlib">
+<msg time="2024-02-23T16:23:21.196310" level="INFO">${sys_date} = 02/23/2024</msg>
+<var>${sys_date}</var>
+<status status="PASS" start="2024-02-23T16:23:21.195678" elapsed="0.001601"/>
+</kw>
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2024-02-23T16:23:21.198275" level="INFO">${date} = 02/23/2024</msg>
+<var>${date}</var>
+<arg>'${date_input}' == 'None'</arg>
+<arg>${sys_date}</arg>
+<arg>${date_input}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2024-02-23T16:23:21.197279" elapsed="0.001994"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-23T16:23:21.200853" level="INFO">02/23/2024</msg>
+<arg>${date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-23T16:23:21.200270" elapsed="0.000583"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${schedule_date_input}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:23:21.201857" elapsed="3.070638"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:24.275490" level="INFO">Typing text '02/23/2024' into text field '(//input[@class='md-datepicker-input'])[2]'.</msg>
+<arg>${schedule_date_input}</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:24.273496" elapsed="3.151362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${schedule_time_input}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:23:27.425558" elapsed="2.039051"/>
+</kw>
+<doc>this is enter date in summary page</doc>
+<status status="PASS" start="2024-02-23T16:23:21.194680" elapsed="8.269929"/>
+</kw>
+<kw name="Enter Time In Summary Page" owner="01_Actions_Page">
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:29.468326" level="INFO">Double clicking element '(//*[@class='md-input'])[2]'.</msg>
+<arg>${schedule_time_input}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:29.467331" elapsed="2.342675"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:31.810006" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<arg>${schedule_time_input}</arg>
+<arg>\\8</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<status status="PASS" start="2024-02-23T16:23:31.810006" elapsed="2.075427"/>
+</kw>
+<kw name="Get Current Time Pm" owner="userlib">
+<msg time="2024-02-23T16:23:33.886407" level="INFO">${get_time} = 16:23 P</msg>
+<var>${get_time}</var>
+<status status="PASS" start="2024-02-23T16:23:33.885888" elapsed="0.000519"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:33.886407" level="INFO">Typing text '16:23 P' into text field '(//*[@class='md-input'])[2]'.</msg>
+<arg>${schedule_time_input}</arg>
+<arg>${get_time}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:33.886407" elapsed="3.222607"/>
+</kw>
+<doc>this is enter time</doc>
+<status status="PASS" start="2024-02-23T16:23:29.465387" elapsed="7.644160"/>
+</kw>
+<doc>this is summary page entering data</doc>
+<status status="PASS" start="2024-02-23T16:22:59.526447" elapsed="37.583100"/>
+</kw>
+<kw name="Click On Save Button In Summary Page" owner="01_Actions_Page">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${campaignSummarySave}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-23T16:23:37.111550" elapsed="3.075462"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:40.188995" level="INFO">Clicking element '//button[@id='campaignSummarySave']'.</msg>
+<arg>${campaignSummarySave}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-23T16:23:40.188332" elapsed="2.114943"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campaignSummarySave}</arg>
+<arg>${MAX_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-23T16:23:42.303275" elapsed="2.035686"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-23T16:23:49.540466" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-23T16:23:49.540466" level="FAIL">Page should have contained text 'Schedule successfully created' but did not.</msg>
+<arg>Schedule successfully created</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-02-23T16:23:44.339144" elapsed="5.207337">Page should have contained text 'Schedule successfully created' but did not.</status>
+</kw>
+<doc>this is Save button on summary page</doc>
+<status status="FAIL" start="2024-02-23T16:23:37.110553" elapsed="12.436895">Page should have contained text 'Schedule successfully created' but did not.</status>
+</kw>
+<kw name="Click On Close Button In Summary Page" owner="01_Actions_Page">
+<doc>this is Save button on summary page</doc>
+<status status="NOT RUN" start="2024-02-23T16:23:49.547448" elapsed="0.000000"/>
+</kw>
+<doc>this test case falow the steps
+1.Step1
+2.Step2 etc..</doc>
+<status status="FAIL" start="2024-02-23T16:20:48.118710" elapsed="181.429773">Page should have contained text 'Schedule successfully created' but did not.</status>
+</test>
+<doc>Write few points about this suite.</doc>
+<status status="FAIL" start="2024-02-23T16:19:49.718028" elapsed="239.831411"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="EC1">EC1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-23T16:23:31.810006" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>

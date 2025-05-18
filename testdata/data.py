@@ -1,0 +1,13 @@
+# Testdata
+search_input_data = "SFTP output connector for automation"
+search_rule_input_data = "First Transaction Date"
+once = "ONCE"
+minutes = "MINUTES"
+hourly = "HOURLY"
+hours= "HOURS"
+daily = "DAILY"
+weekly = "WEEKLY"
+monthly = "MONTHLY"
+weeks = "WEEKS"
+months = "MONTHS"
+day="DAY"
